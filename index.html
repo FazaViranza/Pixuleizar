@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pixuleizar — A Little World For You</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <canvas id="game" width="960" height="640" aria-label="A cozy little world"></canvas>
+    <div class="hud">
+      <span>WASD / ARROWS</span><span>Explore the little world ♡</span>
+    </div>
+    <section id="dialogue" class="dialogue hidden" aria-live="polite">
+      <div id="speaker"></div>
+      <div id="message"></div>
+      <div class="continue">SPACE / ENTER</div>
+    </section>
+    <section id="ending" class="ending hidden">
+      <div class="letter">
+        <div class="small">♡ FOR MY BOY ♡</div>
+        <h1>A little world, just for you.</h1>
+        <p>I wanted to make you somewhere you could wander around in.</p>
+        <p>It is tiny, but every corner has a little piece of what I feel for you.</p>
+        <p class="love">I love you. A lot. More than this little world could ever hold.</p>
+        <p>Thank you for being my boy. ♡</p>
+        <button id="restart">WANDER AGAIN</button>
+      </div>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
