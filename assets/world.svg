@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1280" viewBox="0 0 1920 1280" shape-rendering="crispEdges">
+<defs>
+ <pattern id="grass" width="64" height="64" patternUnits="userSpaceOnUse"><rect width="64" height="64" fill="#74a957"/><path d="M9 45l3-10m5 12l2-7M43 18l3-9m8 42l3-8M28 31l2-5" stroke="#65984f" stroke-width="4"/><rect x="22" y="8" width="5" height="5" fill="#83b762"/><rect x="48" y="38" width="4" height="4" fill="#8fbd6a"/></pattern>
+ <linearGradient id="water" x2="0" y2="1"><stop stop-color="#4c9fa9"/><stop offset="1" stop-color="#28757f"/></linearGradient>
+</defs>
+<!-- base --> <rect width="1920" height="1280" fill="url(#grass)"/>
+<!-- dark forest edge -->
+<path fill="#1f4d38" d="M0 0h1920v180q-120 45-240 0t-240 0-240 0-240 0-240 0-240 0-240 0-240 0zM0 1280V1080q130-45 260 0t260 0 260 0 260 0 260 0 260 0 260 0 260 0v200z"/>
+<!-- path -->
+<path fill="#c7a66b" d="M0 790q180-80 370-25t330 20q170-10 290-105t260-70q190 0 310 95v170q-135-70-300-70-150 0-265 105t-290 120q-210 15-370-30T0 965z"/>
+<path fill="#d5b878" d="M0 820q180-62 350-15t350 25q180 0 305-105t245-72q180 0 330 83v48q-145-65-300-65-145 0-270 105t-305 122q-210 20-380-30T0 920z"/>
+<!-- upper trail --> <path fill="#c7a66b" d="M865 0h190q-15 160-70 275t-70 245h-170q10-145 62-260t58-260z"/>
+<!-- pond -->
+<path fill="#315f55" d="M220 770q55-105 210-118 155-12 270 68 75 52 35 145-50 118-230 145-185 28-295-40-82-51-35-200z"/>
+<path fill="url(#water)" d="M245 778q62-92 187-101 137-9 232 59 60 43 23 116-46 92-183 116-155 27-247-31-67-43-12-159z"/>
+<path fill="none" stroke="#82c9c4" stroke-width="9" d="M286 807q70-62 146-63m-101 125q70-41 131-44m-26-84q55 11 103 44"/>
+<g fill="#759a39"><ellipse cx="535" cy="760" rx="42" ry="25"/><ellipse cx="435" cy="900" rx="35" ry="21"/><ellipse cx="620" cy="875" rx="30" ry="18"/></g>
+<!-- cabin -->
+<g>
+ <rect x="770" y="235" width="440" height="270" fill="#9b5d40" stroke="#4b3832" stroke-width="16"/>
+ <path fill="#59464a" stroke="#3b3032" stroke-width="14" d="M720 255l125-150h285l130 150-55 35-110-105H880L775 290z"/>
+ <path fill="#7b5a5b" d="M760 245l102-118h245l102 118-35 19-94-94H892l-95 94z"/>
+ <rect x="840" y="330" width="75" height="72" fill="#4b777a" stroke="#4b3832" stroke-width="10"/><path stroke="#c6d7b4" stroke-width="7" d="M877 335v62M844 365h67"/>
+ <rect x="1060" y="330" width="75" height="72" fill="#4b777a" stroke="#4b3832" stroke-width="10"/><path stroke="#c6d7b4" stroke-width="7" d="M1097 335v62M1064 365h67"/>
+ <rect x="945" y="350" width="95" height="155" fill="#5b3b35" stroke="#3d302e" stroke-width="11"/><rect x="962" y="369" width="61" height="42" fill="#8b5a43"/><circle cx="1018" cy="440" r="6" fill="#e6bd68"/>
+ <path fill="#d0b57d" stroke="#55433a" stroke-width="9" d="M920 505h145l20 34H900z"/>
+ <path fill="#d8c18a" stroke="#55433a" stroke-width="9" d="M915 540h155l-7 25H907z"/>
+ <g fill="#5d3f34"><rect x="790" y="365" width="24" height="85"/><rect x="1170" y="365" width="24" height="85"/></g>
+ <text x="958" y="310" fill="#f1d69c" font-family="monospace" font-size="25" font-weight="bold">HOME</text>
+</g>
+<!-- trees, layered -->
+<g>
+ <g fill="#513d32" stroke="#382f2c" stroke-width="9">
+  <path d="M75 0h120l-10 235-35 70-28-85-35 55-28-55z"/><path d="M380 0h125l-15 205-35 90-28-90-38 60-23-55z"/><path d="M1430 0h125l-15 210-38 90-27-92-38 60-25-55z"/><path d="M1750 0h120l-12 230-37 80-30-92-35 55-24-50z"/>
+  <path d="M35 1060h120l-10 220H20z"/><path d="M360 1070h130l-12 210H335z"/><path d="M1420 1060h130l-12 220h-145z"/><path d="M1740 1065h125l-10 215h-140z"/>
+ </g>
+ <g fill="#2e6642" stroke="#214b37" stroke-width="10">
+  <circle cx="80" cy="80" r="100"/><circle cx="205" cy="95" r="105"/><circle cx="370" cy="75" r="115"/><circle cx="500" cy="95" r="95"/>
+  <circle cx="1450" cy="80" r="110"/><circle cx="1580" cy="90" r="115"/><circle cx="1740" cy="70" r="110"/><circle cx="1870" cy="100" r="100"/>
+  <circle cx="75" cy="1130" r="115"/><circle cx="220" cy="1150" r="125"/><circle cx="380" cy="1140" r="110"/><circle cx="1510" cy="1140" r="125"/><circle cx="1680" cy="1130" r="120"/><circle cx="1840" cy="1150" r="110"/>
+ </g>
+ <g fill="#3e7a4a"><circle cx="110" cy="65" r="55"/><circle cx="300" cy="55" r="60"/><circle cx="1590" cy="60" r="58"/><circle cx="1810" cy="75" r="55"/><circle cx="160" cy="1110" r="65"/><circle cx="340" cy="1120" r="58"/><circle cx="1570" cy="1110" r="68"/><circle cx="1780" cy="1130" r="62"/></g>
+</g>
+<!-- bridge -->
+<g stroke="#50382e" stroke-width="10"><rect x="545" y="620" width="260" height="82" fill="#8d5b3d"/><path fill="#b87849" d="M550 630h250v18H550zm0 28h250v18H550zm0 28h250v18H550z"/><path d="M545 615v100M800 615v100"/></g>
+<!-- well --> <g><ellipse cx="1510" cy="620" rx="55" ry="25" fill="#6d6e63" stroke="#403c39" stroke-width="10"/><rect x="1460" y="620" width="100" height="55" fill="#818278" stroke="#403c39" stroke-width="10"/><rect x="1470" y="600" width="80" height="24" fill="#a39f86"/><path stroke="#4a4642" stroke-width="10" d="M1465 580v100m90-100v100M1465 580h90"/></g>
+<!-- cart --> <g stroke="#50372e" stroke-width="9"><rect x="350" y="730" width="130" height="55" fill="#a96940"/><rect x="365" y="712" width="105" height="17" fill="#c3834e"/><circle cx="375" cy="800" r="22" fill="#4b3530"/><circle cx="460" cy="800" r="22" fill="#4b3530"/></g>
+<!-- sign --> <g stroke="#4c362c" stroke-width="9"><rect x="1620" y="560" width="155" height="90" rx="8" fill="#8b5a3e"/><path d="M1695 650v120"/><text x="1640" y="598" fill="#f3d18d" font-family="monospace" font-size="18" font-weight="bold">GOOD</text><text x="1640" y="622" fill="#f3d18d" font-family="monospace" font-size="18" font-weight="bold">THINGS →</text></g>
+<!-- flower beds -->
+<g fill="#f1cf69"><circle cx="650" cy="470" r="7"/><circle cx="700" cy="520" r="6"/><circle cx="1230" cy="560" r="7"/><circle cx="1300" cy="520" r="6"/><circle cx="570" cy="900" r="7"/><circle cx="720" cy="970" r="6"/></g>
+<g fill="#e77c83"><circle cx="675" cy="490" r="7"/><circle cx="1260" cy="545" r="7"/><circle cx="520" cy="930" r="7"/><circle cx="1170" cy="680" r="6"/></g>
+<g fill="#dce5c7"><circle cx="620" cy="510" r="6"/><circle cx="1350" cy="600" r="7"/><circle cx="760" cy="910" r="6"/><circle cx="1110" cy="720" r="6"/></g>
+<!-- little rocks --> <g fill="#8a8a79" stroke="#62675c" stroke-width="6"><path d="M1320 820h45l15 20-15 18h-55l-12-20z"/><path d="M1280 900h35l12 17-13 17h-45l-9-18z"/><path d="M890 650h38l10 18-13 16h-43l-8-18z"/></g>
+<!-- butterflies --> <g fill="#f2d37b"><path d="M690 350q-22-20-30 3 12 18 30 8zm8 0q22-20 30 3-12 18-30 8z"/><path d="M1320 400q-18-17-25 3 10 15 25 7zm7 0q18-17 25 3-10 15-25 7z"/></g>
+<!-- firepit --> <g><circle cx="980" cy="760" r="62" fill="#68513d"/><circle cx="980" cy="755" r="42" fill="#e9a83f"/><path fill="#f5d06b" d="M980 705q-24 35 0 58 25-28 0-58zm-20 12q-18 25-2 40 17-17 2-40z"/></g>
+</svg>
