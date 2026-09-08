@@ -9,23 +9,78 @@
 <body>
   <main class="game-shell">
     <canvas id="game" width="960" height="640" aria-label="A cozy little world"></canvas>
-    <div class="hud">
-      <span>WASD / ARROWS</span><span>Explore the little world ♡</span>
+
+    <div id="title-screen" class="title-screen">
+      <div class="title-copy">
+        <div class="eyebrow">♡ A LITTLE ADVENTURE ♡</div>
+        <h1>Pixuleizar</h1>
+        <p>a small world for the people I love</p>
+      </div>
+
+      <div class="menu-card">
+        <button id="start-game" class="menu-btn primary"><span>▶</span> Start the journey</button>
+        <button id="new-game" class="menu-btn"><span>✦</span> New game</button>
+        <button id="how-to" class="menu-btn"><span>?</span> How to play</button>
+        <button id="credits-btn" class="menu-btn"><span>♡</span> Credits</button>
+      </div>
+
+      <div class="title-note">same sky, different days<br><b>still you.</b></div>
+      <div class="version">v1.0.0<br><span>made with ♡</span></div>
     </div>
+
+    <div id="help-panel" class="modal-panel hidden">
+      <div class="modal-paper">
+        <button class="close-modal" data-close="help-panel">×</button>
+        <div class="eyebrow">HOW TO PLAY</div>
+        <h2>Take your time.</h2>
+        <p>Walk around, talk to your boy, and look for the little hearts hidden around the world.</p>
+        <div class="key-row"><kbd>W A S D</kbd><span>move</span></div>
+        <div class="key-row"><kbd>↑ ↓ ← →</kbd><span>move</span></div>
+        <div class="key-row"><kbd>SPACE</kbd><span>talk / continue</span></div>
+        <p class="hint">There are <b>5 little hearts</b>. Find them all. ♡</p>
+      </div>
+    </div>
+
+    <div id="credits-panel" class="modal-panel hidden">
+      <div class="modal-paper credits-paper">
+        <button class="close-modal" data-close="credits-panel">×</button>
+        <div class="eyebrow">MADE FOR ONE PERSON</div>
+        <h2>Pixuleizar</h2>
+        <p>A tiny playable love letter.</p>
+        <p class="credit-love">For my boy,<br>with all my heart. ♡</p>
+        <div class="rule"></div>
+        <small>design · code · tiny world · feelings</small>
+      </div>
+    </div>
+
+    <div id="game-hud" class="game-hud hidden">
+      <div class="hud-left">
+        <div class="brand-mark">PIXULEIZAR <span>♡</span></div>
+        <div class="heart-counter"><b id="heart-count">0</b> / 5 little hearts</div>
+      </div>
+      <div class="objective-card">
+        <span class="objective-dot"></span>
+        <span>Explore · talk · find the memories</span>
+      </div>
+    </div>
+
     <section id="dialogue" class="dialogue hidden" aria-live="polite">
-      <div id="speaker"></div>
+      <div class="dialogue-nameplate"><span id="speaker"></span><span class="tiny-heart">♥</span></div>
       <div id="message"></div>
-      <div class="continue">SPACE / ENTER</div>
+      <div class="continue"><span>SPACE / ENTER</span> <b>↵</b></div>
     </section>
+
     <section id="ending" class="ending hidden">
       <div class="letter">
+        <div class="letter-flower">✿</div>
         <div class="small">♡ FOR MY BOY ♡</div>
-        <h1>A little world, just for you.</h1>
+        <h1>A little world,<br>just for you.</h1>
+        <div class="rule"></div>
         <p>I wanted to make you somewhere you could wander around in.</p>
         <p>It is tiny, but every corner has a little piece of what I feel for you.</p>
-        <p class="love">I love you. A lot. More than this little world could ever hold.</p>
+        <p class="love">I love you. A lot.<br>More than this little world could ever hold.</p>
         <p>Thank you for being my boy. ♡</p>
-        <button id="restart">WANDER AGAIN</button>
+        <button id="restart">WANDER AGAIN <span>↗</span></button>
       </div>
     </section>
   </main>
