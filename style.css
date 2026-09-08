@@ -1,1 +1,75 @@
-*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#172019;color:#f7e9c9;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}body{display:grid;place-items:center;overflow:hidden}.game-shell{position:relative;width:min(96vw,1100px);aspect-ratio:3/2;image-rendering:pixelated}canvas{width:100%;height:100%;display:block;border:4px solid #211d24;border-radius:3px;box-shadow:0 18px 55px #0009;background:#79b95d}.hud{position:absolute;top:12px;left:14px;right:14px;display:flex;justify-content:space-between;gap:10px;pointer-events:none}.hud span{padding:7px 10px;border:2px solid #f7e9c966;background:#20252bd9;border-radius:3px;font-size:11px;letter-spacing:.03em}.dialogue{position:absolute;left:5%;right:5%;bottom:5%;padding:16px 18px;background:#211c24f2;border:4px solid #f7e9c9;box-shadow:7px 7px 0 #0d0c10}.dialogue.hidden,.ending.hidden{display:none}.dialogue #speaker{font-weight:800;color:#ffd166;margin-bottom:8px}.dialogue #message{font-size:15px;line-height:1.55;min-height:45px}.continue{text-align:right;color:#a9d8b8;font-size:10px;margin-top:8px}.ending{position:absolute;inset:0;display:grid;place-items:center;background:#172019ee;padding:5%}.letter{width:min(720px,90%);padding:32px;background:#28222b;border:4px solid #f7e9c9;box-shadow:10px 10px 0 #0d0c10;text-align:center}.letter .small{font-size:11px;color:#a9d8b8;letter-spacing:.18em}.letter h1{font-size:30px;color:#ffd166;margin:14px 0 20px}.letter p{font-size:15px;line-height:1.7}.letter .love{font-size:19px;color:#ff8798;font-weight:800}.letter button{margin-top:12px;padding:11px 18px;border:3px solid #201b22;background:#ffd166;color:#201b22;font:800 12px monospace;cursor:pointer}.letter button:hover{transform:translate(-1px,-1px)}@media(max-width:650px){.hud span{font-size:8px}.dialogue #message{font-size:12px}.letter{padding:22px}.letter h1{font-size:22px}.letter p{font-size:12px}.letter .love{font-size:15px}}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800;900&family=Patrick+Hand&display=swap');
+
+:root{
+  --ink:#3a2a2a;
+  --deep:#24352a;
+  --paper:#f7e7c4;
+  --paper-light:#fff2d2;
+  --cream:#fff7df;
+  --gold:#e6b85c;
+  --pink:#e8787d;
+  --green:#719d57;
+  --green-dark:#365b3b;
+  --shadow:#1a1718;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#17251d;color:var(--cream);font-family:Nunito,ui-sans-serif,system-ui,sans-serif}
+body{display:grid;place-items:center;overflow:hidden}
+.game-shell{position:relative;width:min(96vw,1100px);aspect-ratio:3/2;image-rendering:pixelated;overflow:hidden;background:#6eaa55;border:5px solid #201b1b;box-shadow:0 24px 70px #000b}
+canvas{width:100%;height:100%;display:block;background:#79b95d}
+
+button{font-family:Nunito,ui-sans-serif,sans-serif}
+.hidden{display:none!important}
+
+/* TITLE */
+.title-screen{position:absolute;inset:0;z-index:20;background:linear-gradient(90deg,#17231ee8 0%,#17231ec7 37%,#17231e22 66%,#17231e00 100%);padding:7% 5%;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.title-copy{margin-bottom:22px;text-shadow:4px 4px 0 #1d2520}
+.eyebrow{font:800 11px/1 Nunito,sans-serif;letter-spacing:.22em;color:#f5d99a;text-transform:uppercase;margin-bottom:9px}
+.title-copy h1{font:900 clamp(50px,7vw,78px)/.82 'Patrick Hand',cursive;color:#ffe7af;letter-spacing:.015em;margin:0 0 9px;transform:rotate(-2deg)}
+.title-copy p{font:700 14px/1.3 Nunito,sans-serif;color:#f7e8c9;margin:0 0 0 6px;letter-spacing:.04em}
+.menu-card{width:min(330px,39%);display:flex;flex-direction:column;gap:8px}
+.menu-btn{position:relative;width:100%;border:2px solid #b68a59;background:#392b2be8;color:#f8e6c1;padding:13px 18px;text-align:left;font:800 14px Nunito,sans-serif;letter-spacing:.025em;cursor:pointer;box-shadow:4px 4px 0 #171517;transition:transform .12s,background .12s,color .12s}
+.menu-btn:before{content:'';position:absolute;inset:3px;border:1px solid #e9c98933;pointer-events:none}
+.menu-btn span{display:inline-block;width:26px;color:#e8bd6b;font-size:13px}
+.menu-btn:hover,.menu-btn:focus-visible{transform:translate(3px,-2px);background:#5b4237;color:#fff3d5;outline:none}
+.menu-btn.primary{background:var(--paper);color:#392b2b;border-color:#2b2020}
+.menu-btn.primary span{color:#ba635c}
+.menu-btn.primary:hover{background:#fff0ca;color:#302426}
+.title-note{position:absolute;left:5%;bottom:8%;font:18px/1.25 'Patrick Hand',cursive;color:#ead9b3;transform:rotate(-2deg);opacity:.92}
+.title-note b{font-size:21px;color:#f4c96f}
+.version{position:absolute;right:3%;bottom:3%;text-align:right;font:700 10px/1.5 Nunito,sans-serif;color:#f3dfb5aa;letter-spacing:.05em}
+.version span{color:#f4c96f}
+
+/* MODALS */
+.modal-panel{position:absolute;inset:0;z-index:30;display:grid;place-items:center;background:#18251eea;padding:8%}
+.modal-paper{position:relative;width:min(510px,90%);background:var(--paper);color:var(--ink);padding:34px 38px;border:4px solid #4c362c;box-shadow:9px 9px 0 #111719;transform:rotate(-.6deg)}
+.modal-paper:before{content:'';position:absolute;inset:7px;border:1px dashed #9a704b66;pointer-events:none}
+.modal-paper h2{font:900 34px/1 'Patrick Hand',cursive;margin:5px 0 15px;color:#4b3430}
+.modal-paper p{font-size:14px;line-height:1.65;margin:10px 0}
+.close-modal{position:absolute;right:13px;top:9px;border:0;background:none;color:#765148;font:900 25px/1 Nunito;cursor:pointer;z-index:2}
+.key-row{display:flex;align-items:center;gap:13px;margin:8px 0;font-size:13px;font-weight:800}
+kbd{min-width:72px;padding:6px 9px;background:#4b3733;color:#ffe8ba;border:2px solid #2e2422;box-shadow:2px 2px 0 #96734e;text-align:center;font:800 11px monospace}
+.hint{padding-top:9px;border-top:1px solid #9b744e55;color:#6c4b3e}.hint b{color:#b65d65}
+.credits-paper{text-align:center}.credit-love{font:24px/1.25 'Patrick Hand',cursive!important;color:#bb6266}.rule{height:1px;background:#8b684c66;margin:18px 0}.credits-paper small{font-size:10px;font-weight:800;letter-spacing:.08em;color:#80614e;text-transform:uppercase}
+
+/* IN GAME HUD */
+.game-hud{position:absolute;inset:0 0 auto 0;height:72px;z-index:10;display:flex;align-items:flex-start;justify-content:space-between;padding:12px 14px;pointer-events:none;background:linear-gradient(#14231ed9,transparent)}
+.hud-left{display:flex;align-items:center;gap:10px}
+.brand-mark{font:900 12px Nunito,sans-serif;letter-spacing:.12em;color:#fff0ca;text-shadow:2px 2px 0 #253028}.brand-mark span{color:#f07b7f}
+.heart-counter{background:#332a27e6;border:2px solid #e6c98e99;padding:7px 10px;color:#f6e5c0;font:700 10px Nunito,sans-serif;box-shadow:2px 2px 0 #171818}.heart-counter b{color:#f47d83;font-size:12px}
+.objective-card{display:flex;align-items:center;gap:8px;padding:8px 11px;background:#2b332ae6;border:2px solid #d9c38f88;color:#f7e7c5;font:700 10px Nunito,sans-serif;box-shadow:2px 2px 0 #171818}.objective-dot{width:7px;height:7px;border-radius:50%;background:#efc967;box-shadow:0 0 0 2px #efc96733}
+
+/* DIALOGUE */
+.dialogue{position:absolute;left:4%;right:4%;bottom:4%;z-index:15;padding:17px 20px 13px;background:#302827f5;color:#fff0ce;border:3px solid #e2bd79;box-shadow:7px 7px 0 #131516}
+.dialogue:before{content:'';position:absolute;inset:5px;border:1px solid #f4dfb566;pointer-events:none}
+.dialogue-nameplate{display:flex;align-items:center;gap:7px;margin-bottom:7px;color:#f3c768;font:900 13px Nunito,sans-serif;letter-spacing:.03em;text-transform:uppercase}.tiny-heart{font-size:10px;color:#ed7c83}
+.dialogue #message{font:700 15px/1.55 Nunito,sans-serif;min-height:45px;padding-right:20px}.continue{text-align:right;color:#a8d0a8;font:800 9px Nunito,sans-serif;letter-spacing:.07em;margin-top:5px}.continue b{color:#efc66d;margin-left:3px}
+
+/* ENDING */
+.ending{position:absolute;inset:0;z-index:40;display:grid;place-items:center;background:#17221dec;padding:5%;backdrop-filter:blur(2px)}
+.letter{position:relative;width:min(650px,91%);padding:31px 44px 27px;background:var(--paper);color:var(--ink);border:4px solid #49342d;box-shadow:10px 10px 0 #101617;text-align:center;transform:rotate(-.5deg)}
+.letter:before{content:'';position:absolute;inset:7px;border:1px dashed #9a704b66;pointer-events:none}.letter-flower{font-size:20px;color:#d1706d;margin-bottom:3px}.letter .small{font:800 10px Nunito,sans-serif;color:#8d654d;letter-spacing:.2em}.letter h1{font:900 39px/1.02 'Patrick Hand',cursive;color:#4c3531;margin:11px 0 14px}.letter .rule{margin:0 auto 15px;width:60%}.letter p{font:600 13px/1.65 Nunito,sans-serif;margin:8px auto;max-width:510px}.letter .love{font:900 18px/1.35 'Patrick Hand',cursive;color:#bc5f67;margin:15px auto}.letter button{position:relative;margin-top:10px;padding:11px 19px;border:3px solid #3b2b29;background:#4b3733;color:#ffe8bd;font:900 11px Nunito,sans-serif;letter-spacing:.08em;cursor:pointer;box-shadow:3px 3px 0 #a77a4e}.letter button:hover{transform:translate(2px,-2px);background:#60463a}.letter button span{color:#f1c76e;margin-left:5px}
+
+@media(max-width:720px){.title-screen{padding:6% 5%}.menu-card{width:min(300px,55%)}.title-copy h1{font-size:55px}.title-copy p{font-size:11px}.objective-card{display:none}.brand-mark{display:none}.game-hud{height:60px}.dialogue #message{font-size:12px}.letter{padding:24px}.letter h1{font-size:30px}.letter p{font-size:11px}.letter .love{font-size:16px}}
+@media(max-width:500px){.menu-card{width:68%}.title-note{font-size:14px}.title-note b{font-size:17px}.menu-btn{font-size:12px;padding:11px 13px}.modal-paper{padding:27px 24px}.letter h1{font-size:26px}}
